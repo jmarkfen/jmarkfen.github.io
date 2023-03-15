@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>jmarkfen - GitHub Pages</title>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </head>
     <body>
-        <h1>Hello World</h1>
-        <p>Created by Jaymark Feniza.</p>
-        <p>Work in progress</p>
+        <h2>IT 383 Integrative Programming and Technologies 2</h2>
+        <div id="container">   
+        </div>
+        <script>
+            const url = 'https://raw.githubusercontent.com/jmarkfen/EVSU-BSIT-2022-2023-Semester2-OpenCards/main/IT%20383%20Integrative%20Programming%20and%20Technologies%202%20%5B3C%5D%5BOgrimen%5D/MVC.md';
+            fetch(url)
+                .then(response => response.text())
+                .then(markdown => {
+                    const html = marked(markdown);
+                    document.getElementById(container').innerHTML = html;
+                });
+        </script>
     </body>
 </html>
